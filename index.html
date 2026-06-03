@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Starry的土耳其提问箱 · 2026年8月出发，你的好奇心就是我的旅���地图。留下你对土耳其最想了解的问题！">
+<meta property="og:title" content="你最想搞懂土耳其的哪件事？">
+<meta property="og:description" content="Starry 8月去土耳其，带着你们的问题出发！🌙 留下你的好奇心，我会用答案充满你的想象。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1200&auto=format&fit=crop">
+<meta property="og:type" content="website">
+<title>Starry的土耳其提问箱 · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Noto+Serif+SC:wght@300;400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--g:#C9913D;--g2:#E8C87A;--g3:rgba(201,145,61,.1);--dk:#08030E;--dk2:#120920;--dk3:#1C1030;--dk4:#241540;--tx:#EFE2C4;--tx2:rgba(239,226,196,.58);--tx3:rgba(239,226,196,.27);--bd:rgba(201,145,61,.17);--bdhi:rgba(201,145,61,.45)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--dk);color:var(--tx);font-family:'Noto Serif SC',serif;overflow-x:hidden}
+.hero{position:relative;height:100vh;min-height:560px;max-height:800px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.slides{position:absolute;inset:0}.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 2.2s ease-in-out}.slide.on{opacity:1}
+.hov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(8,3,14,.28) 0%,rgba(8,3,14,.55) 55%,rgba(8,3,14,.92) 100%);z-index:1}
+#cv{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hbody{position:relative;z-index:3;text-align:center;padding:2rem 1.5rem;max-width:620px}
+.hbadge{display:inline-flex;align-items:center;gap:8px;font-family:'Lato';font-size:9.5px;letter-spacing:.44em;color:var(--g);margin-bottom:1.5rem;text-transform:uppercase;border:1px solid var(--bd);padding:5px 18px;border-radius:30px;backdrop-filter:blur(4px)}
+.hbadge b{width:3.5px;height:3.5px;background:var(--g);transform:rotate(45deg);display:inline-block;opacity:.5;flex-shrink:0}
+.htit{font-family:'Cinzel',Georgia,serif;font-size:clamp(22px,5.5vw,40px);font-weight:400;color:var(--tx);line-height:1.38;margin-bottom:.95rem}
+.htit em{color:var(--g2);font-style:normal}
+.hsub{font-size:13px;color:var(--tx2);line-height:2;max-width:480px;margin:0 auto 2rem;font-weight:300}
+.hsub strong{color:var(--g2);font-weight:400}
+.hcta{display:inline-flex;align-items:center;gap:8px;padding:10px 26px;border:1px solid var(--g);color:var(--g);font-family:'Lato';font-size:11px;letter-spacing:.14em;border-radius:30px;transition:all .22s;cursor:pointer;backdrop-filter:blur(4px)}
+.hcta:hover{background:rgba(201,145,61,.1);gap:14px}
+.hdots{position:absolute;bottom:72px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:4}
+.hdot{width:5px;height:5px;border-radius:50%;background:rgba(201,145,61,.22);cursor:pointer;transition:all .3s}
+.hdot.on{background:var(--g);transform:scale(1.35)}
+.hline{position:absolute;bottom:0;inset-x:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,145,61,.3),transparent);z-index:4}
+.orn{padding:9px 1.5rem;background:var(--dk2);display:flex;align-items:center;gap:5px;overflow:hidden}
+.oln{flex:1;height:.5px;background:linear-gradient(to right,transparent,rgba(201,145,61,.2),transparent)}
+.ost{color:var(--g);font-size:12px;opacity:.42}.odt{width:4.5px;height:4.5px;background:var(--g);transform:rotate(45deg);opacity:.27;flex-shrink:0}
+.wrap{max-width:680px;margin:0 auto;padding:0 1.25rem}
+.sec{padding:1.75rem 0;border-bottom:1px solid rgba(201,145,61,.07)}
+.slbl{font-family:'Lato';font-size:9px;letter-spacing:.24em;color:var(--g);text-transform:uppercase;margin-bottom:1rem}
+.share-banner{background:linear-gradient(135deg,rgba(201,145,61,.15),rgba(232,200,122,.08));border:1px solid var(--bd);border-radius:12px;padding:1.25rem;margin-bottom:1rem;text-align:center}
+.share-title{font-size:14px;color:var(--tx);margin-bottom:.75rem;font-weight:500}
+.share-desc{font-size:12px;color:var(--tx2);margin-bottom:1rem;line-height:1.6}
+.share-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.share-btn{padding:8px 16px;border-radius:20px;border:1px solid var(--bd);background:transparent;color:var(--g);font-size:12px;cursor:pointer;transition:all .2s;font-family:'Lato'}
+.share-btn:hover{background:rgba(201,145,61,.1);border-color:var(--g)}
+.cats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.25rem}
+.cat{padding:5px 14px;border-radius:30px;border:1px solid var(--bd);font-size:12px;cursor:pointer;background:transparent;color:var(--tx2);transition:all .18s;user-select:none;font-family:'Lato'}
+.cat:hover,.cat.on{border-color:var(--g);color:var(--g)}.cat.on{background:var(--g3)}
+.fi{margin-bottom:1rem}.fi label{display:block;font-family:'Lato';font-size:9px;letter-spacing:.18em;color:var(--tx3);margin-bottom:6px;text-transform:uppercase}
+.fi textarea,.fi input{width:100%;background:var(--dk3);border:1px solid var(--bd);border-radius:8px;padding:10px 14px;font-size:13px;font-family:'Noto Serif SC',serif;color:var(--tx);outline:none;transition:border-color .2s;line-height:1.7}
+.fi textarea{min-height:88px;resize:vertical}.fi textarea:focus,.fi input:focus{border-color:var(--bdhi)}
+.fi textarea::placeholder,.fi input::placeholder{color:var(--tx3);font-size:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sbtn{width:100%;padding:11px;font-size:11.5px;cursor:pointer;border-radius:8px;background:transparent;border:1px solid var(--g);color:var(--g);font-family:'Lato';letter-spacing:.14em;transition:all .2s}
+.sbtn:hover{background:rgba(201,145,61,.09);letter-spacing:.18em}.sbtn:disabled{opacity:.38;pointer-events:none}
+.ok{display:none;padding:.7rem;background:rgba(60,140,80,.11);border:1px solid rgba(80,180,80,.18);border-radius:8px;color:rgba(150,220,150,.75);font-size:12px;text-align:center;margin-top:.75rem;font-family:'Lato'}
+.lhd{display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem}
+.ltit{font-size:13px;color:var(--tx);letter-spacing:.06em}
+.cb{font-size:10px;padding:2px 11px;border-radius:20px;background:var(--g3);color:var(--g);border:1px solid var(--bd);font-family:'Lato'}
+.stabs{display:flex;gap:6px;margin-bottom:1rem}
+.stab{padding:4px 13px;border-radius:20px;border:1px solid var(--bd);font-size:11px;cursor:pointer;color:var(--tx2);background:transparent;font-family:'Lato';transition:all .18s}
+.stab.on{color:var(--g);border-color:var(--g);background:var(--g3)}
+.card{padding:.875rem 1rem;border-radius:8px;border:1px solid rgba(201,145,61,.1);background:var(--dk2);margin-bottom:8px;border-left:2px solid rgba(201,145,61,.45)}
+.ctop{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin-bottom:.35rem}
+.pill{font-size:10px;padding:1px 8px;border-radius:20px;background:var(--g3);color:var(--g);border:1px solid rgba(201,145,61,.2);font-family:'Lato'}
+.ctime{font-size:10px;color:var(--tx3);margin-left:auto;font-family:'Lato'}
+.cq{font-size:13px;color:var(--tx);line-height:1.75;margin-bottom:.5rem}
+.cft{display:flex;align-items:center;justify-content:space-between}
+.lbtn{display:flex;align-items:center;gap:5px;padding:4px 12px;border-radius:20px;border:1px solid var(--bd);background:transparent;color:var(--tx2);font-size:11px;cursor:pointer;transition:all .18s;font-family:'Lato'}
+.lbtn:hover,.lbtn.liked{border-color:var(--g);color:var(--g)}.lbtn.liked{background:var(--g3)}
+.cfr{font-size:10px;color:var(--tx3);font-family:'Lato'}
+.empty{text-align:center;padding:2.5rem;color:var(--tx3);font-size:11px;letter-spacing:.2em;font-family:'Lato'}
+footer{padding:1.5rem 1.5rem 2rem;text-align:center;font-family:'Lato';font-size:10px;color:var(--tx3);letter-spacing:.16em;border-top:1px solid rgba(201,145,61,.06)}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1000;align-items:center;justify-content:center;padding:1rem}
+.modal.open{display:flex}
+.modal-content{background:var(--dk2);border:1px solid var(--bd);border-radius:12px;padding:2rem;text-align:center;max-width:320px}
+.modal-title{font-size:14px;color:var(--tx);margin-bottom:1rem}
+.modal-close{width:100%;padding:10px;border-radius:6px;border:1px solid var(--bd);background:transparent;color:var(--g);cursor:pointer;margin-top:1rem}
+@media(max-width:480px){.two{grid-template-columns:1fr}.share-btns{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="slides" id="slides"></div>
+  <div class="hov"></div>
+  <canvas id="cv"></canvas>
+  <div class="hbody">
+    <div class="hbadge"><b></b>STARRY · TÜRKIYE · 2026<b></b></div>
+    <h1 class="htit">你最想搞懂<br/><em>土耳其</em>的哪件事？</h1>
+    <p class="hsub">2026年8月，我即将踏上东西方缠绕千年的土地 🌙<br/>带着你们的问题出发——<br/><strong>你的好奇心，就是我的旅行地图。</strong></p>
+    <div class="hcta" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">✦ 留下你的好奇心</div>
+  </div>
+  <div class="hdots" id="hdots"></div>
+  <div class="hline"></div>
+</section>
+
+<div class="orn">
+  <div class="odt"></div><div class="oln"></div><div class="ost">✦</div>
+  <div class="oln"></div><div class="odt"></div><div class="oln"></div>
+  <div class="ost">✦</div><div class="oln"></div><div class="odt"></div>
+  <div class="oln"></div><div class="ost">✦</div><div class="oln"></div><div class="odt"></div>
+</div>
+
+<div id="main" class="wrap">
+
+  <div class="sec">
+    <div class="share-banner">
+      <div class="share-title">📱 分享到朋友圈</div>
+      <div class="share-desc">邀请你的朋友也提问！我会在土耳其用故事和答案回应你们的好奇心。</div>
+      <div class="share-btns">
+        <button class="share-btn" onclick="shareToWechat()">💬 分享到朋友圈</button>
+        <button class="share-btn" onclick="shareToQQ()">🔗 复制链接</button>
+        <button class="share-btn" onclick="shareQRCode()">📲 生成二维码</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" id="formsec">
+    <div class="slbl">📝 提交你的问题</div>
+    <div class="cats" id="cats">
+      <div class="cat" data-v="文化">🎭 文化</div>
+      <div class="cat" data-v="历史">📜 历史</div>
+      <div class="cat" data-v="建筑">🏛️ 建筑</div>
+      <div class="cat" data-v="政治">🗳️ 政治</div>
+      <div class="cat" data-v="美食">🍢 美食</div>
+      <div class="cat" data-v="宗教">☪️ 宗教</div>
+      <div class="cat" data-v="日常生活">🧶 日常</div>
+      <div class="cat" data-v="其他">✨ 其他</div>
+    </div>
+    <div class="fi">
+      <label>你的问题或建议 *</label>
+      <textarea id="qIn" placeholder="想了解土耳其的什么？可以自由发挥！"></textarea>
+    </div>
+    <div class="two">
+      <div class="fi"><label>你叫什么（可不填）</label><input id="unm" placeholder="昵称 / 匿名探险家"/></div>
+      <div class="fi"><label>你在哪里（可不填）</label><input id="uloc" placeholder="广州 · 成都 · 海外……"/></div>
+    </div>
+    <button class="sbtn" id="subBtn" onclick="doSubmit()">🚀 投出我的问题</button>
+    <div class="ok" id="okMsg">✓ 收到啦！你的问题已经放进我的行囊了 🎒</div>
+  </div>
+
+  <div class="sec">
+    <div class="lhd">
+      <span class="ltit">大家的提问</span>
+      <span class="cb" id="cntEl">加载中…</span>
+    </div>
+    <div class="stabs">
+      <div class="stab on" onclick="setSort('new',this)">🕐 最新</div>
+      <div class="stab" onclick="setSort('hot',this)">🔥 最热</div>
+    </div>
+    <div id="listEl"><div class="empty">做第一个探险家吧 ✈️</div></div>
+  </div>
+</div>
+
+<footer>STARRY · TÜRKIYE 2026 · MADE WITH ♥</footer>
+
+<div id="qrModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">长按二维码分享</div>
+    <div id="qr" style="background:white;padding:1rem;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center"></div>
+    <button onclick="closeQRModal()" class="modal-close">关闭</button>
+  </div>
+</div>
+
+<div id="shareHintModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-title">✓ 分享提示</div>
+    <div style="font-size:13px;color:var(--tx2);line-height:1.8;text-align:left">
+      <p>📱 <strong>在微信中：</strong></p>
+      <p>长按右上角 ⋮ → 分享到朋友圈</p>
+      <p style="margin-top:.5rem">💬 <strong>或者：</strong></p>
+      <p>分享给指定朋友或群聊</p>
+      <p style="margin-top:1rem;font-size:12px;color:var(--tx3)">链接已复制，现在可以粘贴分享了</p>
+    </div>
+    <button onclick="closeShareModal()" class="modal-close">明白了</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const SLI=['https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1468487422149-5edc5034604f?w=1400&auto=format&fit=crop'];
+let ci=0;
+const sEl=document.getElementById('slides'),dotsEl=document.getElementById('hdots');
+SLI.forEach((u,i)=>{const d=document.createElement('div');d.className='slide'+(i===0?' on':'');d.style.backgroundImage=`url('${u}')`;sEl.appendChild(d);const p=document.createElement('div');p.className='hdot'+(i===0?' on':'');p.onclick=()=>goS(i);dotsEl.appendChild(p)});
+function goS(n){document.querySelectorAll('.slide')[ci].classList.remove('on');document.querySelectorAll('.hdot')[ci].classList.remove('on');ci=n;document.querySelectorAll('.slide')[n].classList.add('on');document.querySelectorAll('.hdot')[n].classList.add('on')}
+setInterval(()=>goS((ci+1)%SLI.length),6500);
+(function(){const cv=document.getElementById('cv'),h=document.querySelector('.hero');cv.width=h.offsetWidth||680;cv.height=h.offsetHeight||600;const ctx=cv.getContext('2d'),W=cv.width,H=cv.height;const stars=Array.from({length:170},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.1+.12,op:Math.random()*.42+.1,ph:Math.random()*6.28,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12}));function moon(){const mx=W-58,my=52,mr=20;ctx.beginPath();ctx.arc(mx,my,mr,0,Math.PI*2);ctx.fillStyle='rgba(240,205,115,.09)';ctx.fill();ctx.beginPath();ctx.arc(mx+9,my-3,mr*.87,0,Math.PI*2);ctx.fillStyle='#08030E';ctx.fill()}function frame(){ctx.clearRect(0,0,W,H);moon();stars.forEach(s=>{s.ph+=.011;const a=Math.max(0,s.op+Math.sin(s.ph)*.11);ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,238,188,${a})`;ctx.fill();s.x+=s.vx;s.y+=s.vy;if(s.x<0)s.x=W;if(s.x>W)s.x=0;if(s.y<0)s.y=H;if(s.y>H)s.y=0});requestAnimationFrame(frame)}frame()})();
+const SKEY='turkey:v2:suggestions';
+let items=[],sortMode='new';
+function ago(ts){const d=Date.now()-ts;if(d<60000)return'刚刚';if(d<3600000)return Math.floor(d/60000)+'分钟前';if(d<86400000)return Math.floor(d/3600000)+'小时前';if(d<604800000)return Math.floor(d/86400000)+'天前';return new Date(ts).toLocaleDateString('zh-CN',{month:'short',day:'numeric'})}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+document.querySelectorAll('.cat').forEach(e=>e.onclick=()=>e.classList.toggle('on'));
+function selCats(){return[...document.querySelectorAll('.cat.on')].map(e=>e.dataset.v)}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify(items))}catch(e){}}
+function loadItems(){try{const r=localStorage.getItem(SKEY);items=r?JSON.parse(r):[]}catch(e){items=[]}render()}
+function render(){
+  document.getElementById('cntEl').textContent=items.length?`共 ${items.length} 条`:'暂无留言';
+  if(!items.length){document.getElementById('listEl').innerHTML='<div class="empty">做第一个探险家吧 ✈️</div>';return}
+  const sorted=[...items].sort((a,b)=>sortMode==='hot'?(b.likes||0)-(a.likes||0):b.ts-a.ts);
+  document.getElementById('listEl').innerHTML=sorted.map(i=>`
+    <div class="card">
+      <div class="ctop">${(i.cats||[]).map(c=>`<span class="pill">${esc(c)}</span>`).join('')}<span class="ctime">${ago(i.ts)}</span></div>
+      <div class="cq">${esc(i.q)}</div>
+      <div class="cft">
+        <button class="lbtn" onclick="doLike('${i.id}')">♡ 想知道${i.likes>0?` <strong>${i.likes}</strong>':''}</button>
+        <span class="cfr">${esc(i.name||'匿名')}${i.loc?' · '+esc(i.loc):''}</span>
+      </div>
+    </div>`).join('')
+}
+function doLike(id){const it=items.find(i=>i.id===id);if(it){it.likes=(it.likes||0)+1;save();render()}}
+function setSort(m,el){sortMode=m;document.querySelectorAll('.stab').forEach(e=>e.classList.remove('on'));el.classList.add('on');render()}
+function doSubmit(){
+  const q=document.getElementById('qIn').value.trim();if(!q){document.getElementById('qIn').focus();return}
+  const btn=document.getElementById('subBtn');btn.disabled=true;btn.textContent='投递中…';
+  const it={id:Date.now()+''+Math.floor(Math.random()*99999),q,cats:selCats(),name:document.getElementById('unm').value.trim(),loc:document.getElementById('uloc').value.trim(),ts:Date.now(),likes:0};
+  items.push(it);save();
+  ['qIn','unm','uloc'].forEach(id=>document.getElementById(id).value='');
+  document.querySelectorAll('.cat.on').forEach(e=>e.classList.remove('on'));
+  const ok=document.getElementById('okMsg');ok.style.display='block';setTimeout(()=>ok.style.display='none',3500);
+  render();btn.disabled=false;btn.textContent='🚀 投出我的问题';
+}
+loadItems();
+function shareToWechat(){alert('📱 微信分享方式：\n\n长按右上角 ⋮ 菜单\n → 分享到朋友圈\n → 分享给朋友');}
+function shareToQQ(){const url=window.location.href;const title='你最想搞懂土耳其的哪件事？';const desc='Starry 8月去土耳其，带着你们的问题出发！🌙 留下你的好奇心，我会用答案充满你的想象。';navigator.clipboard.writeText(`${title}\n${desc}\n\n${url}`).then(()=>{document.getElementById('shareHintModal').classList.add('open');}).catch(()=>{prompt('请复制以下链接分享：', url);});}
+function shareQRCode(){const modal=document.getElementById('qrModal');const qrDiv=document.getElementById('qr');qrDiv.innerHTML='';new QRCode(qrDiv, {text: window.location.href,width: 200,height: 200,colorDark: '#000000',colorLight: '#ffffff',correctLevel: QRCode.CorrectLevel.H});modal.classList.add('open');}
+function closeQRModal(){document.getElementById('qrModal').classList.remove('open');}
+function closeShareModal(){document.getElementById('shareHintModal').classList.remove('open');}
+document.getElementById('qrModal').onclick=function(e){if(e.target===this)closeQRModal()};
+document.getElementById('shareHintModal').onclick=function(e){if(e.target===this)closeShareModal()};
+</script>
+</body>
+</html>
