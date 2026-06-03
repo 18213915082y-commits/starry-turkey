@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Starry的土耳其提问箱 · 2026年8月出发，你的好奇心就是我的旅���地图。留下你对土耳其最想了解的问题！">
-<meta property="og:title" content="你最想搞懂土耳其的哪件事？">
-<meta property="og:description" content="Starry 8月去土耳其，带着你们的问题出发！🌙 留下你的好奇心，我会用答案充满你的想象。">
-<meta property="og:image" content="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1200&auto=format&fit=crop">
-<meta property="og:type" content="website">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Starry的土耳其提问箱 · 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Noto+Serif+SC:wght@300;400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
@@ -15,6 +9,7 @@
 :root{--g:#C9913D;--g2:#E8C87A;--g3:rgba(201,145,61,.1);--dk:#08030E;--dk2:#120920;--dk3:#1C1030;--dk4:#241540;--tx:#EFE2C4;--tx2:rgba(239,226,196,.58);--tx3:rgba(239,226,196,.27);--bd:rgba(201,145,61,.17);--bdhi:rgba(201,145,61,.45)}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 body{background:var(--dk);color:var(--tx);font-family:'Noto Serif SC',serif;overflow-x:hidden}
+/* HERO */
 .hero{position:relative;height:100vh;min-height:560px;max-height:800px;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .slides{position:absolute;inset:0}.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 2.2s ease-in-out}.slide.on{opacity:1}
 .hov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(8,3,14,.28) 0%,rgba(8,3,14,.55) 55%,rgba(8,3,14,.92) 100%);z-index:1}
@@ -32,18 +27,53 @@ body{background:var(--dk);color:var(--tx);font-family:'Noto Serif SC',serif;over
 .hdot{width:5px;height:5px;border-radius:50%;background:rgba(201,145,61,.22);cursor:pointer;transition:all .3s}
 .hdot.on{background:var(--g);transform:scale(1.35)}
 .hline{position:absolute;bottom:0;inset-x:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,145,61,.3),transparent);z-index:4}
+/* ORN */
 .orn{padding:9px 1.5rem;background:var(--dk2);display:flex;align-items:center;gap:5px;overflow:hidden}
 .oln{flex:1;height:.5px;background:linear-gradient(to right,transparent,rgba(201,145,61,.2),transparent)}
 .ost{color:var(--g);font-size:12px;opacity:.42}.odt{width:4.5px;height:4.5px;background:var(--g);transform:rotate(45deg);opacity:.27;flex-shrink:0}
+/* LAYOUT */
 .wrap{max-width:680px;margin:0 auto;padding:0 1.25rem}
 .sec{padding:1.75rem 0;border-bottom:1px solid rgba(201,145,61,.07)}
 .slbl{font-family:'Lato';font-size:9px;letter-spacing:.24em;color:var(--g);text-transform:uppercase;margin-bottom:1rem}
-.share-banner{background:linear-gradient(135deg,rgba(201,145,61,.15),rgba(232,200,122,.08));border:1px solid var(--bd);border-radius:12px;padding:1.25rem;margin-bottom:1rem;text-align:center}
-.share-title{font-size:14px;color:var(--tx);margin-bottom:.75rem;font-weight:500}
-.share-desc{font-size:12px;color:var(--tx2);margin-bottom:1rem;line-height:1.6}
-.share-btns{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.share-btn{padding:8px 16px;border-radius:20px;border:1px solid var(--bd);background:transparent;color:var(--g);font-size:12px;cursor:pointer;transition:all .2s;font-family:'Lato'}
-.share-btn:hover{background:rgba(201,145,61,.1);border-color:var(--g)}
+/* VIDEO */
+.vm{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;background:var(--dk3);margin-bottom:10px;border:1px solid var(--bd)}
+.vm iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:10px}
+.vthumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.vth{position:relative;border-radius:8px;overflow:hidden;cursor:pointer;border:1px solid var(--bd);aspect-ratio:16/9;background:var(--dk3)}
+.vth img{width:100%;height:100%;object-fit:cover;opacity:.6;transition:opacity .2s;display:block}
+.vth:hover img,.vth.on img{opacity:1}.vth.on{border-color:var(--g)}
+.vpl{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);font-size:18px}
+.vth.on .vpl{color:var(--g)}
+/* IMAGE STRIP */
+.istrip{display:flex;gap:8px;overflow-x:auto;padding:8px 0 4px;scrollbar-width:thin;scrollbar-color:var(--bd) transparent}
+.istrip::-webkit-scrollbar{height:3px}.istrip::-webkit-scrollbar-thumb{background:var(--bd);border-radius:2px}
+.simg{height:96px;width:144px;flex-shrink:0;border-radius:7px;object-fit:cover;border:1px solid var(--bd);opacity:.72;transition:opacity .2s;cursor:pointer}
+.simg:hover{opacity:1}
+/* NEWS */
+.ngrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:500px){.ngrid{grid-template-columns:1fr}}
+.nc{border-radius:10px;border:1px solid var(--bd);background:var(--dk2);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
+.nc:hover{border-color:var(--bdhi)}
+.nth{width:100%;height:108px;object-fit:cover;filter:brightness(.8) saturate(.7);display:block}
+.nbd{padding:.75rem .875rem;flex:1;display:flex;flex-direction:column;gap:.3rem}
+.ntag{font-family:'Lato';font-size:9px;letter-spacing:.14em;color:var(--g);text-transform:uppercase}
+.ntit{font-size:12.5px;color:var(--tx);line-height:1.58}
+.ndsc{font-size:11.5px;color:var(--tx2);line-height:1.68;font-family:'Lato';font-weight:300;flex:1}
+.ndt{font-size:10px;color:var(--tx3);font-family:'Lato'}
+.nw{grid-column:1/-1;display:grid;grid-template-columns:188px 1fr}
+.nw .nth{width:100%;height:100%;min-height:110px}
+@media(max-width:500px){.nw{grid-template-columns:1fr;grid-column:1}}
+.nnote{font-size:10.5px;color:var(--tx3);font-family:'Lato';margin-top:.75rem}
+/* SUGGESTIONS */
+.qtabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:1rem}
+.qtab{padding:5px 13px;border-radius:20px;border:1px solid var(--bd);font-size:11px;cursor:pointer;color:var(--tx2);background:transparent;letter-spacing:.04em;transition:all .18s;font-family:'Lato'}
+.qtab:hover,.qtab.on{color:var(--g);border-color:var(--g)}.qtab.on{background:var(--g3)}
+.qlist{display:flex;flex-direction:column;gap:6px}
+.qcard{padding:.7rem .875rem;border-radius:8px;border:1px solid var(--bd);background:var(--dk2);cursor:pointer;transition:all .18s;display:flex;align-items:flex-start;gap:.6rem}
+.qcard:hover{border-color:var(--bdhi);background:var(--dk3)}
+.qi{font-size:15px;flex-shrink:0;margin-top:.05rem}.qt{font-size:12.5px;color:var(--tx2);line-height:1.58;font-weight:300}
+.qcard:hover .qt{color:var(--tx)}.qhint{font-size:11px;color:var(--tx3);font-family:'Lato';margin-top:.5rem}
+/* FORM */
 .cats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:1.25rem}
 .cat{padding:5px 14px;border-radius:30px;border:1px solid var(--bd);font-size:12px;cursor:pointer;background:transparent;color:var(--tx2);transition:all .18s;user-select:none;font-family:'Lato'}
 .cat:hover,.cat.on{border-color:var(--g);color:var(--g)}.cat.on{background:var(--g3)}
@@ -55,6 +85,7 @@ body{background:var(--dk);color:var(--tx);font-family:'Noto Serif SC',serif;over
 .sbtn{width:100%;padding:11px;font-size:11.5px;cursor:pointer;border-radius:8px;background:transparent;border:1px solid var(--g);color:var(--g);font-family:'Lato';letter-spacing:.14em;transition:all .2s}
 .sbtn:hover{background:rgba(201,145,61,.09);letter-spacing:.18em}.sbtn:disabled{opacity:.38;pointer-events:none}
 .ok{display:none;padding:.7rem;background:rgba(60,140,80,.11);border:1px solid rgba(80,180,80,.18);border-radius:8px;color:rgba(150,220,150,.75);font-size:12px;text-align:center;margin-top:.75rem;font-family:'Lato'}
+/* LIST */
 .lhd{display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem}
 .ltit{font-size:13px;color:var(--tx);letter-spacing:.06em}
 .cb{font-size:10px;padding:2px 11px;border-radius:20px;background:var(--g3);color:var(--g);border:1px solid var(--bd);font-family:'Lato'}
@@ -71,13 +102,53 @@ body{background:var(--dk);color:var(--tx);font-family:'Noto Serif SC',serif;over
 .lbtn:hover,.lbtn.liked{border-color:var(--g);color:var(--g)}.lbtn.liked{background:var(--g3)}
 .cfr{font-size:10px;color:var(--tx3);font-family:'Lato'}
 .empty{text-align:center;padding:2.5rem;color:var(--tx3);font-size:11px;letter-spacing:.2em;font-family:'Lato'}
-footer{padding:1.5rem 1.5rem 2rem;text-align:center;font-family:'Lato';font-size:10px;color:var(--tx3);letter-spacing:.16em;border-top:1px solid rgba(201,145,61,.06)}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1000;align-items:center;justify-content:center;padding:1rem}
-.modal.open{display:flex}
-.modal-content{background:var(--dk2);border:1px solid var(--bd);border-radius:12px;padding:2rem;text-align:center;max-width:320px}
-.modal-title{font-size:14px;color:var(--tx);margin-bottom:1rem}
-.modal-close{width:100%;padding:10px;border-radius:6px;border:1px solid var(--bd);background:transparent;color:var(--g);cursor:pointer;margin-top:1rem}
-@media(max-width:480px){.two{grid-template-columns:1fr}.share-btns{flex-direction:column}}
+/* ADMIN */
+.abar{padding:.875rem;text-align:center}
+.atog{font-size:9px;color:var(--tx3);background:none;border:none;cursor:pointer;font-family:'Lato';letter-spacing:.2em;text-transform:uppercase}
+.atog:hover{color:var(--tx2)}
+.awrap{display:none;background:var(--dk2);padding:1.5rem;border-top:1px solid var(--bd)}
+.awrap.open{display:block}.lbox{max-width:260px;margin:0 auto;text-align:center;padding:1rem 0}
+.lbox p{font-size:13px;color:var(--tx2);margin-bottom:1.25rem;line-height:1.8}
+.pwe{font-size:11px;color:rgba(200,90,90,.7);margin-top:.4rem;min-height:14px;font-family:'Lato'}
+.dash{display:none}.dash.open{display:block}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:1.5rem}
+.stat{background:var(--dk3);border-radius:8px;padding:.75rem;text-align:center;border:1px solid rgba(201,145,61,.08)}
+.sn{font-size:22px;color:var(--tx);line-height:1.2}.sl{font-size:9px;color:var(--tx3);margin-top:3px;letter-spacing:.1em;font-family:'Lato';text-transform:uppercase}
+.frow{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1rem}
+.ftag{padding:3px 11px;border-radius:20px;border:1px solid var(--bd);font-size:11px;cursor:pointer;color:var(--tx2);background:transparent;transition:all .18s;font-family:'Lato'}
+.ftag.on{background:var(--g3);color:var(--g);border-color:var(--g)}
+.aitem{display:flex;align-items:flex-start;gap:.75rem;padding:.75rem 1rem;border-radius:8px;border:1px solid rgba(201,145,61,.08);background:var(--dk3);margin-bottom:6px}
+.aim{flex:1;min-width:0}.aiq{font-size:12px;color:var(--tx);margin-bottom:.25rem;line-height:1.6}
+.aimt{font-size:10px;color:var(--tx3);font-family:'Lato'}
+.dbtn{padding:3px 9px;border-radius:6px;border:1px solid rgba(180,60,60,.28);color:rgba(200,100,100,.6);font-size:10px;background:none;cursor:pointer;font-family:'Lato';flex-shrink:0}
+.dbtn:hover{background:rgba(180,60,60,.1)}
+.ebtn{width:100%;margin-top:1rem;padding:9px;font-size:11px;cursor:pointer;border-radius:8px;border:1px solid var(--bd);background:transparent;color:var(--g);font-family:'Lato';letter-spacing:.1em}
+footer{padding:1.5rem 1.5rem 84px;text-align:center;font-family:'Lato';font-size:10px;color:var(--tx3);letter-spacing:.16em;border-top:1px solid rgba(201,145,61,.06)}
+/* MUSIC PLAYER */
+.mp{position:fixed;bottom:0;left:0;right:0;z-index:100;background:rgba(6,2,12,.96);border-top:1px solid rgba(201,145,61,.22);backdrop-filter:blur(14px)}
+.mp-prog{height:2px;background:rgba(201,145,61,.1)}
+.mp-prog-fill{height:100%;background:var(--g);width:0;transition:width .3s}
+.mp-bar{display:flex;align-items:center;gap:10px;padding:9px 1.25rem;cursor:pointer;user-select:none}
+.mp-ico{font-size:16px;color:var(--g);flex-shrink:0}
+.mp-info{flex:1;min-width:0}
+.mp-name{font-size:12px;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'Lato'}
+.mp-sub{font-size:10px;color:var(--tx3);font-family:'Lato';margin-top:1px}
+.mp-ctrls{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.mpb{width:29px;height:29px;border-radius:50%;border:1px solid var(--bd);background:transparent;color:var(--tx2);cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center;transition:all .18s;font-family:serif}
+.mpb:hover{border-color:var(--g);color:var(--g)}
+.mpb.main{width:33px;height:33px;border-color:var(--g);color:var(--g);font-size:13px}
+.mp-arr{font-size:10px;color:var(--tx3);margin-left:4px;transition:transform .2s;flex-shrink:0}
+.mp-arr.open{transform:rotate(180deg)}
+.mp-panel{max-height:0;overflow:hidden;transition:max-height .32s ease-out}
+.mp-panel.open{max-height:320px;border-top:1px solid rgba(201,145,61,.1)}
+.mp-track{display:flex;align-items:center;gap:10px;padding:.6rem 1.25rem;cursor:pointer;transition:background .15s}
+.mp-track:hover{background:rgba(201,145,61,.04)}.mp-track.on{background:rgba(201,145,61,.07)}
+.mp-tico{font-size:14px;flex-shrink:0}
+.mp-tinfo{flex:1;min-width:0}
+.mp-tname{font-size:12px;color:var(--tx2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'Lato'}
+.mp-track.on .mp-tname{color:var(--g)}
+.mp-ttype{font-size:10px;color:var(--tx3);font-family:'Lato'}
+@media(max-width:480px){.two{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.vthumbs{grid-template-columns:repeat(2,1fr)}.mp-sub{display:none}}
 </style>
 </head>
 <body>
@@ -87,10 +158,10 @@ footer{padding:1.5rem 1.5rem 2rem;text-align:center;font-family:'Lato';font-size
   <div class="hov"></div>
   <canvas id="cv"></canvas>
   <div class="hbody">
-    <div class="hbadge"><b></b>STARRY · TÜRKIYE · 2026<b></b></div>
+    <div class="hbadge"><b></b>STARRY &nbsp;·&nbsp; TÜRKIYE &nbsp;·&nbsp; 2026<b></b></div>
     <h1 class="htit">你最想搞懂<br/><em>土耳其</em>的哪件事？</h1>
     <p class="hsub">2026年8月，我即将踏上东西方缠绕千年的土地 🌙<br/>带着你们的问题出发——<br/><strong>你的好奇心，就是我的旅行地图。</strong></p>
-    <div class="hcta" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">✦ 留下你的好奇心</div>
+    <div class="hcta" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">✦&nbsp; 留下你的好奇心</div>
   </div>
   <div class="hdots" id="hdots"></div>
   <div class="hline"></div>
@@ -105,18 +176,112 @@ footer{padding:1.5rem 1.5rem 2rem;text-align:center;font-family:'Lato';font-size
 
 <div id="main" class="wrap">
 
+  <!-- VIDEO -->
   <div class="sec">
-    <div class="share-banner">
-      <div class="share-title">📱 分享到朋友圈</div>
-      <div class="share-desc">邀请你的朋友也提问！我会在土耳其用故事和答案回应你们的好奇心。</div>
-      <div class="share-btns">
-        <button class="share-btn" onclick="shareToWechat()">💬 分享到朋友圈</button>
-        <button class="share-btn" onclick="shareToQQ()">🔗 复制链接</button>
-        <button class="share-btn" onclick="shareQRCode()">📲 生成二维码</button>
+    <div class="slbl">📺 推荐视频 · 土耳其影像</div>
+    <div class="vm">
+      <iframe id="mainVid" src="https://www.youtube.com/embed/5Y3j4XrnASc?rel=0&modestbranding=1" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe>
+    </div>
+    <div class="vthumbs">
+      <div class="vth on" onclick="setVid('5Y3j4XrnASc',this)">
+        <img src="https://img.youtube.com/vi/5Y3j4XrnASc/hqdefault.jpg" alt="Istanbul Drone"/>
+        <div class="vpl">▶</div>
+      </div>
+      <div class="vth" onclick="setVid('TUPL4Vgn-no',this)">
+        <img src="https://img.youtube.com/vi/TUPL4Vgn-no/hqdefault.jpg" alt="Istanbul Walk 2025"/>
+        <div class="vpl">▶</div>
+      </div>
+      <div class="vth" onclick="setVid('hljZphKH7e0',this)">
+        <img src="https://img.youtube.com/vi/hljZphKH7e0/hqdefault.jpg" alt="Istanbul 4K Relax"/>
+        <div class="vpl">▶</div>
+      </div>
+      <div class="vth" onclick="setVid('m7SiuLgFlu0',this)">
+        <img src="https://img.youtube.com/vi/m7SiuLgFlu0/hqdefault.jpg" alt="Istanbul 2024"/>
+        <div class="vpl">▶</div>
       </div>
     </div>
+    <p style="font-size:10px;color:var(--tx3);text-align:center;margin-top:.5rem;font-family:'Lato'">点击缩略图切换视频 · 视频来源 YouTube</p>
+    <div class="istrip" id="istrip"></div>
   </div>
 
+  <!-- NEWS -->
+  <div class="sec">
+    <div class="slbl">📰 土耳其 · 2026最新动态</div>
+    <div class="ngrid">
+      <div class="nc nw">
+        <img class="nth" src="https://images.unsplash.com/photo-1529973625058-a665431328fb?w=400&auto=format&fit=crop" alt="政治"/>
+        <div class="nbd">
+          <span class="ntag">🗳️ 政治</span>
+          <div class="ntit">反对党领袖被罢黜，伊斯坦布尔市长遭逮捕</div>
+          <div class="ndsc">2026年5月，CHP主席欧泽尔被法院强制免职，警察动用催泪弹驱散支持者。伊斯坦布尔市长伊马姆奥卢仍被羁押，公开指称埃尔多安是幕后推手。CHP多名成员因"2023年党代会违规"被捕，土耳其政治紧张态势持续升温。</div>
+          <div class="ndt">2026.05.26 · Turkish Minute</div>
+        </div>
+      </div>
+      <div class="nc">
+        <img class="nth" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&auto=format&fit=crop" alt="经济"/>
+        <div class="nbd">
+          <span class="ntag">💰 经济</span>
+          <div class="ntit">央行将2026年通胀目标大幅上调至26%</div>
+          <div class="ndsc">受地缘政治与能源价格冲击，土耳其央行将通胀预期从16%调升至26%，里拉持续承压，民众购买力持续缩水。</div>
+          <div class="ndt">2026.05.14 · Trading Economics</div>
+        </div>
+      </div>
+      <div class="nc">
+        <img class="nth" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&auto=format&fit=crop" alt="旅游"/>
+        <div class="nbd">
+          <span class="ntag">✈️ 旅游</span>
+          <div class="ntit">Q1旅游创纪录：920万游客、近百亿美元</div>
+          <div class="ndsc">2026年一季度国际游客同比+4.2%，日本、英国、海湾国家增幅最显著，土耳其跻身全球顶级旅游目的地。</div>
+          <div class="ndt">2026.04 · Turkish Ministry of Tourism</div>
+        </div>
+      </div>
+      <div class="nc">
+        <img class="nth" src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=400&auto=format&fit=crop" alt="文化"/>
+        <div class="nbd">
+          <span class="ntag">🎬 文化</span>
+          <div class="ntit">帕慕克《纯真博物馆》Netflix席卷全土</div>
+          <div class="ndsc">诺奖作家奥尔罕·帕慕克同名小说改编为Netflix剧集，以1970年代伊斯坦布尔为背景，上线即引发全国热议。</div>
+          <div class="ndt">2026.03 · Euronews</div>
+        </div>
+      </div>
+      <div class="nc">
+        <img class="nth" src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=400&auto=format&fit=crop" alt="外交"/>
+        <div class="nbd">
+          <span class="ntag">🌍 外交</span>
+          <div class="ntit">加沙救援船队从土耳其马尔马里斯集结出发</div>
+          <div class="ndsc">逾30艘船只在土耳其海岸待命驶向加沙，土政府谴责以色列拦截为"海盗行为"，国际压力持续升温。</div>
+          <div class="ndt">2026.05.10 · Al Jazeera</div>
+        </div>
+      </div>
+      <div class="nc">
+        <img class="nth" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=400&auto=format&fit=crop" alt="体育"/>
+        <div class="nbd">
+          <span class="ntag">⚽ 体育</span>
+          <div class="ntit">土耳其vs美国·埃尔多安欲借世界杯会特朗普</div>
+          <div class="ndsc">2026年世界杯于北美举行，土美同组。埃尔多安据报正安排在洛杉矶赛事期间与特朗普举行双边峰会。</div>
+          <div class="ndt">2026.05 · Türkiye Today</div>
+        </div>
+      </div>
+    </div>
+    <div class="nnote">* 来源：Al Jazeera · Turkish Minute · Türkiye Today · Euronews，截至2026年5月26日</div>
+  </div>
+
+  <!-- QUESTION SUGGESTIONS -->
+  <div class="sec">
+    <div class="slbl">💡 不知道问什么？参考这里</div>
+    <div class="qtabs" id="qtabs">
+      <div class="qtab on" data-cat="政治" onclick="switchQ('政治',this)">🗳️ 政治</div>
+      <div class="qtab" data-cat="历史" onclick="switchQ('历史',this)">📜 历史</div>
+      <div class="qtab" data-cat="文化" onclick="switchQ('文化',this)">🎭 文化</div>
+      <div class="qtab" data-cat="建筑" onclick="switchQ('建筑',this)">🏛️ 建筑</div>
+      <div class="qtab" data-cat="美食" onclick="switchQ('美食',this)">🍢 美食</div>
+      <div class="qtab" data-cat="日常" onclick="switchQ('日常',this)">🧶 日常旅行</div>
+    </div>
+    <div class="qlist" id="qlist"></div>
+    <div class="qhint">👆 点击任意问题自动填入提问框 · 可直接修改后提交</div>
+  </div>
+
+  <!-- FORM -->
   <div class="sec" id="formsec">
     <div class="slbl">📝 提交你的问题</div>
     <div class="cats" id="cats">
@@ -131,16 +296,17 @@ footer{padding:1.5rem 1.5rem 2rem;text-align:center;font-family:'Lato';font-size
     </div>
     <div class="fi">
       <label>你的问题或建议 *</label>
-      <textarea id="qIn" placeholder="想了解土耳其的什么？可以自由发挥！"></textarea>
+      <textarea id="qIn" placeholder="可以直接点上方参考问题快速填入，也可以自由发挥！什么都可以问。"></textarea>
     </div>
     <div class="two">
-      <div class="fi"><label>你叫什么（可不填）</label><input id="unm" placeholder="昵称 / 匿名探险家"/></div>
+      <div class="fi"><label>你叫什么（可不填）</label><input id="unm" placeholder="匿名探险家也可以"/></div>
       <div class="fi"><label>你在哪里（可不填）</label><input id="uloc" placeholder="广州 · 成都 · 海外……"/></div>
     </div>
-    <button class="sbtn" id="subBtn" onclick="doSubmit()">🚀 投出我的问题</button>
-    <div class="ok" id="okMsg">✓ 收到啦！你的问题已经放进我的行囊了 🎒</div>
+    <button class="sbtn" id="subBtn" onclick="doSubmit()">🚀 &nbsp;投出我的问题</button>
+    <div class="ok" id="okMsg">✓ &nbsp;收到啦！你的问题已经放进我的行囊了 🎒</div>
   </div>
 
+  <!-- LIST -->
   <div class="sec">
     <div class="lhd">
       <span class="ltit">大家的提问</span>
@@ -150,45 +316,196 @@ footer{padding:1.5rem 1.5rem 2rem;text-align:center;font-family:'Lato';font-size
       <div class="stab on" onclick="setSort('new',this)">🕐 最新</div>
       <div class="stab" onclick="setSort('hot',this)">🔥 最热</div>
     </div>
-    <div id="listEl"><div class="empty">做第一个探险家吧 ✈️</div></div>
+    <div id="listEl"><div class="empty">L O A D I N G · · ·</div></div>
   </div>
 </div>
 
-<footer>STARRY · TÜRKIYE 2026 · MADE WITH ♥</footer>
-
-<div id="qrModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-title">长按二维码分享</div>
-    <div id="qr" style="background:white;padding:1rem;border-radius:8px;margin-bottom:1rem;display:flex;align-items:center;justify-content:center"></div>
-    <button onclick="closeQRModal()" class="modal-close">关闭</button>
-  </div>
+<div class="abar">
+  <button class="atog" onclick="document.getElementById('awrap').classList.toggle('open')">⚙ &nbsp;管理后台</button>
 </div>
-
-<div id="shareHintModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-title">✓ 分享提示</div>
-    <div style="font-size:13px;color:var(--tx2);line-height:1.8;text-align:left">
-      <p>📱 <strong>在微信中：</strong></p>
-      <p>长按右上角 ⋮ → 分享到朋友圈</p>
-      <p style="margin-top:.5rem">💬 <strong>或者：</strong></p>
-      <p>分享给指定朋友或群聊</p>
-      <p style="margin-top:1rem;font-size:12px;color:var(--tx3)">链接已复制，现在可以粘贴分享了</p>
+<div class="awrap" id="awrap">
+  <div class="wrap">
+    <div class="lbox" id="lbox">
+      <p>🔒 仅创作者可见<br/>请输入管理密码</p>
+      <div class="fi"><input type="password" id="pwIn" placeholder="密码" onkeydown="if(event.key==='Enter')checkPw()"/></div>
+      <button class="sbtn" onclick="checkPw()" style="margin-top:0">进入后台</button>
+      <div class="pwe" id="pwe"></div>
     </div>
-    <button onclick="closeShareModal()" class="modal-close">明白了</button>
+    <div class="dash" id="dash">
+      <div class="slbl" style="margin-bottom:1rem">留言管理后台</div>
+      <div class="stats" id="statsEl"></div>
+      <div class="slbl" style="margin-bottom:8px">按分类筛选</div>
+      <div class="frow" id="frow"></div>
+      <div id="alst"></div>
+      <button class="ebtn" onclick="doExport()">📋 &nbsp;导出全部留言</button>
+    </div>
   </div>
 </div>
+<footer>STARRY &nbsp;·&nbsp; TÜRKIYE 2026 &nbsp;·&nbsp; MADE WITH ♥</footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<!-- MUSIC PLAYER (fixed bottom) -->
+<div class="mp" id="mp">
+  <div class="mp-prog"><div class="mp-prog-fill" id="mpFill"></div></div>
+  <div class="mp-bar" onclick="toggleMpPanel()">
+    <span class="mp-ico" id="mpIco">🎵</span>
+    <div class="mp-info">
+      <div class="mp-name" id="mpName">选择音乐 · 5首土耳其歌曲等你探索</div>
+      <div class="mp-sub" id="mpSub">土耳其氛围 · 奥斯曼古典 · 土耳其流行</div>
+    </div>
+    <div class="mp-ctrls" onclick="event.stopPropagation()">
+      <button class="mpb" onclick="prevTk()">⏮</button>
+      <button class="mpb main" id="mpPlay" onclick="togglePlay()">▶</button>
+      <button class="mpb" onclick="nextTk()">⏭</button>
+    </div>
+    <span class="mp-arr" id="mpArr">▲</span>
+  </div>
+  <div class="mp-panel" id="mpPanel">
+    <div class="mp-track" id="tk0" onclick="playTk(0)"><span class="mp-tico">🌙</span><div class="mp-tinfo"><div class="mp-tname">Istanbul · Deep Chill Turkish Music</div><div class="mp-ttype">土耳其氛围 · 2025年新作</div></div></div>
+    <div class="mp-track" id="tk1" onclick="playTk(1)"><span class="mp-tico">🎻</span><div class="mp-tinfo"><div class="mp-tname">Turkish Classical Meditation</div><div class="mp-ttype">奥斯曼古典 · 冥想放松</div></div></div>
+    <div class="mp-track" id="tk2" onclick="playTk(2)"><span class="mp-tico">🪕</span><div class="mp-tinfo"><div class="mp-tname">Classical Ottoman & Turkish Music</div><div class="mp-ttype">宫廷传统乐器合奏</div></div></div>
+    <div class="mp-track" id="tk3" onclick="playTk(3)"><span class="mp-tico">💃</span><div class="mp-tinfo"><div class="mp-tname">Tarkan · Şımarık（经典流行）</div><div class="mp-ttype">土耳其流行天王 · 1997年神曲</div></div></div>
+    <div class="mp-track" id="tk4" onclick="playTk(4)"><span class="mp-tico">🎤</span><div class="mp-tinfo"><div class="mp-tname">Sezen Aksu · Seni Yerler</div><div class="mp-ttype">土耳其流行天后 · 经典情歌</div></div></div>
+  </div>
+</div>
+<iframe id="ytAudio" src="" width="1" height="1" allow="autoplay" frameborder="0" style="position:fixed;opacity:0;bottom:-10px;left:-10px;pointer-events:none"></iframe>
+
 <script>
+/* SLIDESHOW */
 const SLI=['https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1570939274717-7eda259b50ed?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1583422409516-2895a77efded?w=1400&auto=format&fit=crop','https://images.unsplash.com/photo-1468487422149-5edc5034604f?w=1400&auto=format&fit=crop'];
 let ci=0;
 const sEl=document.getElementById('slides'),dotsEl=document.getElementById('hdots');
 SLI.forEach((u,i)=>{const d=document.createElement('div');d.className='slide'+(i===0?' on':'');d.style.backgroundImage=`url('${u}')`;sEl.appendChild(d);const p=document.createElement('div');p.className='hdot'+(i===0?' on':'');p.onclick=()=>goS(i);dotsEl.appendChild(p)});
 function goS(n){document.querySelectorAll('.slide')[ci].classList.remove('on');document.querySelectorAll('.hdot')[ci].classList.remove('on');ci=n;document.querySelectorAll('.slide')[n].classList.add('on');document.querySelectorAll('.hdot')[n].classList.add('on')}
 setInterval(()=>goS((ci+1)%SLI.length),6500);
+
+/* IMAGE STRIP */
+const STRIP=['https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b','https://images.unsplash.com/photo-1570939274717-7eda259b50ed','https://images.unsplash.com/photo-1524231757912-21f4fe3a7200','https://images.unsplash.com/photo-1583422409516-2895a77efded','https://images.unsplash.com/photo-1600093463592-8e36ae95ef56','https://images.unsplash.com/photo-1529973625058-a665431328fb','https://images.unsplash.com/photo-1568992687947-868a62a9f521','https://images.unsplash.com/photo-1508098682722-e99c43a406b2','https://images.unsplash.com/photo-1570939274717-7eda259b50ed','https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b'];
+const stripEl=document.getElementById('istrip');
+STRIP.forEach((u,i)=>{const img=document.createElement('img');img.className='simg';img.src=u+'?w=220&h=130&auto=format&fit=crop';img.alt='土耳其';img.loading='lazy';stripEl.appendChild(img)});
+let sd=1;setInterval(()=>{if(!stripEl)return;stripEl.scrollLeft+=1.4*sd;if(stripEl.scrollLeft>=stripEl.scrollWidth-stripEl.clientWidth-2)sd=-1;if(stripEl.scrollLeft<=0)sd=1},28);
+
+/* STARS CANVAS */
 (function(){const cv=document.getElementById('cv'),h=document.querySelector('.hero');cv.width=h.offsetWidth||680;cv.height=h.offsetHeight||600;const ctx=cv.getContext('2d'),W=cv.width,H=cv.height;const stars=Array.from({length:170},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.1+.12,op:Math.random()*.42+.1,ph:Math.random()*6.28,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12}));function moon(){const mx=W-58,my=52,mr=20;ctx.beginPath();ctx.arc(mx,my,mr,0,Math.PI*2);ctx.fillStyle='rgba(240,205,115,.09)';ctx.fill();ctx.beginPath();ctx.arc(mx+9,my-3,mr*.87,0,Math.PI*2);ctx.fillStyle='#08030E';ctx.fill()}function frame(){ctx.clearRect(0,0,W,H);moon();stars.forEach(s=>{s.ph+=.011;const a=Math.max(0,s.op+Math.sin(s.ph)*.11);ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,238,188,${a})`;ctx.fill();s.x+=s.vx;s.y+=s.vy;if(s.x<0)s.x=W;if(s.x>W)s.x=0;if(s.y<0)s.y=H;if(s.y>H)s.y=0});requestAnimationFrame(frame)}frame()})();
+
+/* VIDEO */
+function setVid(id,el){document.getElementById('mainVid').src=`https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`;document.querySelectorAll('.vth').forEach(t=>t.classList.remove('on'));el.classList.add('on')}
+
+/* QUESTION DATA */
+const QD={
+  '政治':[
+    {i:'🤔',t:'土耳其的民主还在吗？普通市民怎么看埃尔多安执政20多年？'},
+    {i:'🗳️',t:'反对党被打压后，年轻一代还有投票的热情吗？选举还公平吗？'},
+    {i:'🇪🇺',t:'土耳其加入欧盟的梦想还在吗？土欧关系现在是什么状态？'},
+    {i:'🌍',t:'土耳其在俄乌、以哈冲突中两边周旋，普通人怎么看这个"骑墙"外交？'},
+    {i:'📺',t:'土耳其的媒体自由程度怎样？新闻是否受管控，人们靠什么了解真相？'},
+    {i:'👮',t:'伊斯坦布尔市长被抓后，当地人的日常生活和心态有什么变化？'},
+  ],
+  '历史':[
+    {i:'🕌',t:'1453年奥斯曼攻陷君士坦丁堡，当地人是如何看待那段历史的？'},
+    {i:'🎖️',t:'凯末尔的世俗化改革真的成功了吗？宗教和现代性在土耳其如何共存？'},
+    {i:'⚠️',t:'亚美尼亚种族灭绝问题，土耳其教科书怎么写？年轻人怎么看？'},
+    {i:'🏛️',t:'拜占庭帝国留下了什么？土耳其人如何对待这段基督教历史遗迹？'},
+    {i:'🗺️',t:'特洛伊真的在土耳其吗？那段荷马史诗对当地文化有什么影响？'},
+    {i:'🧭',t:'丝绸之路曾经过哪些土耳其城市？这段历史在当地今天有什么痕迹？'},
+  ],
+  '文化':[
+    {i:'🐱',t:'伊斯坦布尔的街猫文化从何而来？猫对土耳其人有什么特殊意义？'},
+    {i:'🤝',t:'土耳其人的待客之道有多热情？会有陌生人主动邀请你去家里喝茶吗？'},
+    {i:'🌙',t:'年轻人还信仰伊斯兰教吗？宗教在日常生活中的存在感强不强？'},
+    {i:'🧿',t:'"邪眼"蓝色护身符在土耳其是什么文化？只是装饰品还是真的信？'},
+    {i:'💃',t:'土耳其肚皮舞和苏菲旋转舞，是日常娱乐还是只给游客看的表演？'},
+    {i:'📖',t:'帕慕克的小说《我的名字叫红》描述的伊斯坦布尔，今天还存在那个感觉吗？'},
+  ],
+  '建筑':[
+    {i:'⛪',t:'圣索菲亚大教堂改回清真寺后，进去参观是什么感受？对非穆斯林友好吗？'},
+    {i:'🕌',t:'蓝色清真寺和圣索菲亚大教堂只能选一个，你会选哪个，为什么？'},
+    {i:'🪨',t:'卡帕多奇亚的岩石洞穴酒店还有人住吗？住在里面是什么体验？'},
+    {i:'🏺',t:'以弗所古城保存得好吗？和罗马、雅典的遗址比，哪里更值得去？'},
+    {i:'💧',t:'棉花堡（帕姆卡莱）现在环境被保护好了吗？还是人太多已经变样了？'},
+    {i:'🌆',t:'伊斯坦布尔老城（法提赫）和新城（贝伊奥卢）的建筑反差有多大？'},
+  ],
+  '美食':[
+    {i:'🍖',t:'土耳其烤肉（Kebab）和中国烤串有什么本质区别？当地人怎么点怎么吃？'},
+    {i:'🍯',t:'土耳其甜品有多甜？果仁蜜饼（Baklava）一口下去是什么感觉？'},
+    {i:'🍳',t:'土耳其早餐文化（Kahvaltı）听说超丰盛，一顿早饭能有多少种食物？'},
+    {i:'☕',t:'土耳其咖啡和茶，当地人日常更爱喝哪个？怎么喝？街边一杯多少钱？'},
+    {i:'🦑',t:'在伊斯坦布尔吃海鲜，博斯普鲁斯海峡的鱼是否真的新鲜便宜？'},
+    {i:'🧆',t:'最地道的街头小吃是什么？路边摊安全可以放心吃吗？'},
+  ],
+  '日常':[
+    {i:'💰',t:'2026年在伊斯坦布尔一天生活费大概多少人民币？整体物价贵不贵？'},
+    {i:'🗣️',t:'土耳其人如何看待中国人？旅行中会有被特别对待的情况吗？'},
+    {i:'🚋',t:'伊斯坦布尔的交通系统好用吗？地铁、渡轮、有轨电车怎么选？'},
+    {i:'📱',t:'在土耳其上网方便吗？Google、YouTube、Instagram都能正常用吗？'},
+    {i:'💳',t:'当地支付——刷卡、现金还是手机支付哪个更通用？人民币好换吗？'},
+    {i:'⚠️',t:'2026年土耳其治安怎么样？一个人旅游安全吗？有哪些需要特别注意的？'},
+  ]
+};
+let curQCat='政治';
+function switchQ(cat,el){curQCat=cat;document.querySelectorAll('.qtab').forEach(t=>t.classList.remove('on'));el.classList.add('on');renderQL()}
+function renderQL(){
+  document.getElementById('qlist').innerHTML=(QD[curQCat]||[]).map((q,i)=>`<div class="qcard" data-i="${i}"><span class="qi">${q.i}</span><span class="qt">${q.t}</span></div>`).join('')
+}
+document.getElementById('qlist').addEventListener('click',function(e){
+  const c=e.target.closest('.qcard');
+  if(!c)return;
+  const q=QD[curQCat][+c.dataset.i];
+  if(!q)return;
+  document.getElementById('qIn').value=q.t;
+  const mapCat={'政治':'政治','历史':'历史','文化':'文化','建筑':'建筑','美食':'美食','日常':'日常生活'};
+  const cv=mapCat[curQCat];
+  document.querySelectorAll('.cat').forEach(cat=>{if(cat.dataset.v===cv)cat.classList.add('on')});
+  document.getElementById('formsec').scrollIntoView({behavior:'smooth'});
+  setTimeout(()=>document.getElementById('qIn').focus(),400);
+});
+renderQL();
+
+/* MUSIC PLAYER */
+const TRACKS=[
+  {id:'SOKB5JICx6s',name:'Istanbul · Deep Chill',sub:'土耳其氛围音乐 2025',ico:'🌙'},
+  {id:'kS0gGcD_qJs',name:'Turkish Classical Meditation',sub:'奥斯曼古典 · 冥想',ico:'🎻'},
+  {id:'veorrBfF9yA',name:'Classical Ottoman & Turkish',sub:'宫廷传统乐器',ico:'🪕'},
+  {id:'JJPlzNajdUs',name:'Tarkan · Şımarık',sub:'土耳其流行经典 1997',ico:'💃'},
+  {id:'IVE00F-2ZCw',name:'Sezen Aksu · Seni Yerler',sub:'土耳其流行天后',ico:'🎤'},
+];
+let curTk=-1,isPlay=false;
+function toggleMpPanel(){const p=document.getElementById('mpPanel'),a=document.getElementById('mpArr');p.classList.toggle('open');a.classList.toggle('open')}
+function playTk(idx){
+  curTk=idx;isPlay=true;
+  const t=TRACKS[idx];
+  document.getElementById('mpName').textContent=t.name;
+  document.getElementById('mpSub').textContent=t.sub;
+  document.getElementById('mpIco').textContent=t.ico;
+  document.getElementById('mpPlay').textContent='⏸';
+  document.querySelectorAll('.mp-track').forEach((el,i)=>el.classList.toggle('on',i===idx));
+  document.getElementById('ytAudio').src=`https://www.youtube.com/embed/${t.id}?autoplay=1&enablejsapi=1`;
+  document.getElementById('mpPanel').classList.remove('open');
+  document.getElementById('mpArr').classList.remove('open');
+  // progress animation
+  let w=0;clearInterval(window._mpTimer);
+  window._mpTimer=setInterval(()=>{w=(w+.05)%100;document.getElementById('mpFill').style.width=w+'%'},200);
+}
+function togglePlay(){
+  if(curTk<0){toggleMpPanel();return}
+  const yt=document.getElementById('ytAudio');
+  if(isPlay){
+    yt.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
+    isPlay=false;document.getElementById('mpPlay').textContent='▶';
+    clearInterval(window._mpTimer);
+  }else{
+    yt.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}','*');
+    isPlay=true;document.getElementById('mpPlay').textContent='⏸';
+    let w=parseFloat(document.getElementById('mpFill').style.width)||0;
+    window._mpTimer=setInterval(()=>{w=(w+.05)%100;document.getElementById('mpFill').style.width=w+'%'},200);
+  }
+}
+function prevTk(){playTk(curTk<=0?TRACKS.length-1:curTk-1)}
+function nextTk(){playTk((curTk+1)%TRACKS.length)}
+
+/* DATA */
 const SKEY='turkey:v2:suggestions';
-let items=[],sortMode='new';
+let items=[],sortMode='new',fcat='全部';
+const liked=new Set();
 function ago(ts){const d=Date.now()-ts;if(d<60000)return'刚刚';if(d<3600000)return Math.floor(d/60000)+'分钟前';if(d<86400000)return Math.floor(d/3600000)+'小时前';if(d<604800000)return Math.floor(d/86400000)+'天前';return new Date(ts).toLocaleDateString('zh-CN',{month:'short',day:'numeric'})}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 document.querySelectorAll('.cat').forEach(e=>e.onclick=()=>e.classList.toggle('on'));
@@ -204,12 +521,12 @@ function render(){
       <div class="ctop">${(i.cats||[]).map(c=>`<span class="pill">${esc(c)}</span>`).join('')}<span class="ctime">${ago(i.ts)}</span></div>
       <div class="cq">${esc(i.q)}</div>
       <div class="cft">
-        <button class="lbtn" onclick="doLike('${i.id}')">♡ 想知道${i.likes>0?` <strong>${i.likes}</strong>':''}</button>
+        <button class="lbtn${liked.has(i.id)?' liked':''}" onclick="doLike('${i.id}')">♡ 我也想知道${i.likes>0?` <strong>${i.likes}</strong>`:''}</button>
         <span class="cfr">${esc(i.name||'匿名')}${i.loc?' · '+esc(i.loc):''}</span>
       </div>
     </div>`).join('')
 }
-function doLike(id){const it=items.find(i=>i.id===id);if(it){it.likes=(it.likes||0)+1;save();render()}}
+function doLike(id){if(liked.has(id))return;liked.add(id);const it=items.find(i=>i.id===id);if(it){it.likes=(it.likes||0)+1;save();render()}}
 function setSort(m,el){sortMode=m;document.querySelectorAll('.stab').forEach(e=>e.classList.remove('on'));el.classList.add('on');render()}
 function doSubmit(){
   const q=document.getElementById('qIn').value.trim();if(!q){document.getElementById('qIn').focus();return}
@@ -219,16 +536,31 @@ function doSubmit(){
   ['qIn','unm','uloc'].forEach(id=>document.getElementById(id).value='');
   document.querySelectorAll('.cat.on').forEach(e=>e.classList.remove('on'));
   const ok=document.getElementById('okMsg');ok.style.display='block';setTimeout(()=>ok.style.display='none',3500);
-  render();btn.disabled=false;btn.textContent='🚀 投出我的问题';
+  render();btn.disabled=false;btn.textContent='🚀 \u00a0投出我的问题';
+}
+function checkPw(){
+  if(document.getElementById('pwIn').value==='Starry2026'){document.getElementById('lbox').style.display='none';document.getElementById('dash').classList.add('open');renderDash()}
+  else{const e=document.getElementById('pwe');e.textContent='密码不对，再想想？';setTimeout(()=>e.textContent='',2500)}
+}
+function renderDash(){
+  const tL=items.reduce((s,i)=>s+(i.likes||0),0);
+  const cM={};items.forEach(i=>(i.cats||[]).forEach(c=>{cM[c]=(cM[c]||0)+1}));
+  const top=Object.entries(cM).sort((a,b)=>b[1]-a[1])[0];
+  const nms=[...new Set(items.map(i=>i.name).filter(Boolean))];
+  document.getElementById('statsEl').innerHTML=`<div class="stat"><div class="sn">${items.length}</div><div class="sl">总提问</div></div><div class="stat"><div class="sn">${tL}</div><div class="sl">总想知道</div></div><div class="stat"><div class="sn">${nms.length}</div><div class="sl">留名</div></div><div class="stat"><div class="sn" style="font-size:${top&&top[0].length>3?'12px':'22px'}">${top?esc(top[0]):'—'}</div><div class="sl">最热</div></div>`;
+  const cats=['全部',...new Set(items.flatMap(i=>i.cats||[]))];
+  document.getElementById('frow').innerHTML=cats.map(c=>`<div class="ftag${c===fcat?' on':''}" onclick="setF(this,'${esc(c)}')">${esc(c)}</div>`).join('');
+  const view=fcat==='全部'?items:items.filter(i=>(i.cats||[]).includes(fcat));
+  document.getElementById('alst').innerHTML=view.length?[...view].reverse().map(i=>`<div class="aitem"><div class="aim"><div class="aiq">${esc(i.q)}</div><div class="aimt">${esc((i.cats||[]).join('/'))||'无'} · ${esc(i.name||'匿名')}${i.loc?' · '+esc(i.loc):''} · ${ago(i.ts)} · ♡${i.likes||0}</div></div><button class="dbtn" onclick="delIt('${i.id}')">删除</button></div>`).join(''):'<div class="empty" style="font-size:11px;padding:1rem">暂无留言</div>';
+}
+function setF(el,c){fcat=c;renderDash()}
+function delIt(id){items=items.filter(i=>i.id!==id);save();render();renderDash()}
+function doExport(){
+  const txt=items.map((i,n)=>`${n+1}. [${(i.cats||[]).join('/')||'无'}] ${i.q}\n   — ${i.name||'匿名'}${i.loc?' ('+i.loc+')':''} | ${new Date(i.ts).toLocaleDateString('zh-CN')} | ♡${i.likes||0}`).join('\n\n');
+  navigator.clipboard.writeText(txt).catch(()=>alert(txt));
+  const b=document.querySelector('.ebtn');b.textContent='✓ 已复制！';setTimeout(()=>b.textContent='📋 \u00a0导出全部留言',2500);
 }
 loadItems();
-function shareToWechat(){alert('📱 微信分享方式：\n\n长按右上角 ⋮ 菜单\n → 分享到朋友圈\n → 分享给朋友');}
-function shareToQQ(){const url=window.location.href;const title='你最想搞懂土耳其的哪件事？';const desc='Starry 8月去土耳其，带着你们的问题出发！🌙 留下你的好奇心，我会用答案充满你的想象。';navigator.clipboard.writeText(`${title}\n${desc}\n\n${url}`).then(()=>{document.getElementById('shareHintModal').classList.add('open');}).catch(()=>{prompt('请复制以下链接分享：', url);});}
-function shareQRCode(){const modal=document.getElementById('qrModal');const qrDiv=document.getElementById('qr');qrDiv.innerHTML='';new QRCode(qrDiv, {text: window.location.href,width: 200,height: 200,colorDark: '#000000',colorLight: '#ffffff',correctLevel: QRCode.CorrectLevel.H});modal.classList.add('open');}
-function closeQRModal(){document.getElementById('qrModal').classList.remove('open');}
-function closeShareModal(){document.getElementById('shareHintModal').classList.remove('open');}
-document.getElementById('qrModal').onclick=function(e){if(e.target===this)closeQRModal()};
-document.getElementById('shareHintModal').onclick=function(e){if(e.target===this)closeShareModal()};
 </script>
 </body>
 </html>
